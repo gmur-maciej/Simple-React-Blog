@@ -8,7 +8,7 @@ function App() {
   return (
     <Center>
       <Stack align={'start'} maxW={700}>
-        <Heading size={'4xl'}>Blog</Heading>
+        <Heading size={'4xl'} m={'0 auto'}>Blog</Heading>
         <For each={[MockData.longPost, MockData.shortPost]}>
           {(post) => (
             <PostPreview post={post} />

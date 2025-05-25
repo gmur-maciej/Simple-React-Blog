@@ -1,6 +1,7 @@
 import { Button, Card, Flex, Show, Text } from "@chakra-ui/react";
 import type IPost from "../../../models/post";
 import React from "react";
+import "./animations.css"
 
 interface IProps {
     post: IPost,
@@ -20,7 +21,7 @@ export default function PostPreview(props: IProps) {
     const { post } = props;
 
     return (
-        <Card.Root w={'100%'}>
+        <Card.Root w={'100%'} boxShadow={'inset 0 0 10px 0 rgba(0, 0, 0, 0.25)'} _hover={{ animation: '200ms linear forwards levitate'}}>
             <Card.Body>
                 <Flex justify={'space-between'}>
                     <Card.Title>{post.title}</Card.Title>
