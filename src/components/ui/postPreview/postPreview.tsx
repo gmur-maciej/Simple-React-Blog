@@ -30,7 +30,7 @@ export default function PostPreview(props: IProps) {
                 <Card.Description overflow={'clip'} ref={postContentRef} lineClamp={isContentExtended ? undefined : 3}>
                     {post.content}
                 </Card.Description>
-                <Card.Footer mt={5}>
+                <Card.Footer mt={5} pb={0}>
                     <Show when={displayReadMore}>
                         <Button onClick={() => setIsContentExtended(value => !value)}>{isContentExtended ? 'Show less' : 'Show more'}</Button>
                     </Show>
