@@ -1,15 +1,16 @@
 import { Card } from "@chakra-ui/react";
+import type IPost from "../../models/post";
 
 interface IProps {
-    title: string,
-    content: string,
+    post: IPost,
 }
 
 export default function PostPreview(props: IProps) {
+    const { post } = props;
     return (
         <Card.Root>
-            <Card.Header>{props.title}</Card.Header>
-            <Card.Body>{props.content}</Card.Body>
+            <Card.Header>{post.title}</Card.Header>
+            <Card.Body>{post.content}</Card.Body>
             <Card.Footer></Card.Footer>
         </Card.Root>
     )
