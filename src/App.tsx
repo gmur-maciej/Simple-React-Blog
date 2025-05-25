@@ -1,22 +1,15 @@
 import { Center, For, Heading, Stack } from '@chakra-ui/react'
 import './App.css'
-import type IPost from './models/post'
-import PostPreview from './components/ui/postPrevies'
-
-const posts: IPost[] = [
-  {
-    title: "First post",
-    content: "Some content to display there"
-  }
-]
+import PostPreview from './components/ui/postPreview/postPreview'
+import MockData from './components/ui/postPreview/mockData'
 
 function App() {
 
   return (
     <Center>
-      <Stack align={'start'}>
+      <Stack align={'start'} maxW={700}>
         <Heading size={'4xl'}>Blog</Heading>
-        <For each={posts}>
+        <For each={[MockData.longPost, MockData.shortPost]}>
           {(post) => (
             <PostPreview post={post} />
           )}
