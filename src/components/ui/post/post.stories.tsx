@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import PostPreview from './postPreview';
-import MockData from './mockData';
+import Post from './post';
+import MockData from './MockData';
 
 const meta = {
-  component: PostPreview,
-} satisfies Meta<typeof PostPreview>;
+  component: Post,
+} satisfies Meta<typeof Post>;
 
 export default meta;
 
