@@ -1,12 +1,14 @@
 import type IPost from "../../../models/post";
 
 const shortPost: IPost = {
+    id: '0',
     title: "Lorem ipsum",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a.",
     date: new Date()
 }
 
 const longPost: IPost = {
+    id: '1',
     title: "Lorem ipsum",
     content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut facilisis lorem, eget commodo arcu. Sed malesuada est imperdiet mollis tincidunt. Suspendisse felis justo, elementum ut aliquam quis, tincidunt a magna. Mauris in suscipit dolor. Etiam varius sollicitudin egestas. Mauris tincidunt porttitor felis nec suscipit. In hac habitasse platea dictumst.
 

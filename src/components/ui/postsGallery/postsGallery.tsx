@@ -1,12 +1,17 @@
 import { For } from "@chakra-ui/react";
 import Post from "../post/post";
-import MockData from "../post/MockData";
+import React from "react";
+import postsContext from "../../../contexts/postsContext";
+import { NavLink } from "react-router";
 
 export default function PostsGallery() {
+    const posts = React.useContext(postsContext);
     return (
-        <For each={[MockData.longPost, MockData.shortPost]}>
+        <For each={posts}>
             {(post) => (
-                <Post post={post} asPreview/>
+                <NavLink to={'/post/' + post.id}>
+                    <Post post={post} asPreview />
+                </NavLink>
             )}
         </For>
     )
