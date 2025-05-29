@@ -8,9 +8,9 @@ interface IProps {
 
 export default function TopBar(props: IProps) {
     return (
-        <Flex justify={'space-between'}>
+        <Flex justify={'space-between'} m={'20px 10px'}>
             <NavLink to={'/'}>
-                <Heading size={'4xl'} m={'0 auto'}>Blog</Heading>
+                <Heading size={'4xl'} m={'0 auto'}>Music Notes</Heading>
             </NavLink>
             <HStack gap={25}>
                 <Button title="Home" url="/" />

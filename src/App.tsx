@@ -6,7 +6,7 @@ function App() {
 
   return (
     <Center>
-      <Stack maxW={700}>
+      <Stack maxW={700} w={'100%'}>
         <TopBar />
         <Outlet />
       </Stack>

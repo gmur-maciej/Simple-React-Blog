@@ -18,8 +18,10 @@ createRoot(document.getElementById('root')!).render(
         <PostsContext value={posts}>
           <Routes>
             <Route path='/' element={<App />}>
-              <Route index element={<PostsGallery />} />
-              <Route path='post/:id' element={<SinglePostPage />} />
+              <Route index element={"Main site"} />
+              <Route path='posts' element={<PostsGallery />} />
+              <Route path='posts/:id' element={<SinglePostPage />} />
+              <Route path='about' element={"About me"} />
             </Route>
           </Routes>
         </PostsContext>
