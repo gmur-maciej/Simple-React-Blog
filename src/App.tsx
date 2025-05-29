@@ -1,12 +1,13 @@
-import { Center, Heading, Stack } from '@chakra-ui/react'
+import { Center, Stack } from '@chakra-ui/react'
 import { Outlet } from 'react-router'
+import TopBar from './components/ui/topBar/topBar'
 
 function App() {
 
   return (
     <Center>
       <Stack maxW={700}>
-        <Heading size={'4xl'} m={'0 auto'}>Blog</Heading>
+        <TopBar />
         <Outlet />
       </Stack>
     </Center>
