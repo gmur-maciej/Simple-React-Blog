@@ -6,15 +6,21 @@ interface IProps {
     isLiked: boolean,
     likesNumber: number,
     like(): any,
-    sendComment(text: string): any,
+    sendComment(text: string): Promise<any>,
 }
 
 export default function PostActionsBox(props: IProps) {
     const commentFieldRef = React.useRef<HTMLInputElement>(null);
     const { isLiked, likesNumber } = props;
-    const sendComment = () => {
+    const sendComment = async () => {
         if (commentFieldRef.current) {
-            props.sendComment(commentFieldRef.current.value);
+            try {
+                await props.sendComment(commentFieldRef.current.value);
+                commentFieldRef.current.value = '';
+                
+            } catch (error) {
+                
+            }
         }
     };
     return (
